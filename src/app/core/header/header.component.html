@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Afeka Facebook</a>
+    </div>
+
+    <div class="navbar-default">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a href="#">Public feed</a></li>
+        <li routerLinkActive="active"><a href="#">Privet feed</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <ng-template [ngIf]="dummycondition">
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Register</a></li>
+        </ng-template >
+
+        <ng-template [ngIf]="dummycondition">
+          <li style="cursor: pointer" ><a >Logout</a></li>
+          <li class="dropdown" appDropdown >
+            <a style="cursor: pointer"
+               class="dropdown-toggle"
+               role="button">Manage <span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+              <li><a style="cursor: pointer" >Save Data</a></li>
+              <li><a style="cursor: pointer" >Fetch Data</a></li>
+            </ul>
+
+          </li>
+        </ng-template>
+
+      </ul>
+    </div>
+
+
+  </div>
+</nav>
