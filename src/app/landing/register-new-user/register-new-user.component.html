@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form
+      [formGroup]="userRegisterForm">
+      <!--(submit)="onSubmit()"-->
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            type="button"
+            class="btn btn-primary"
+            [disabled]="userRegisterForm.valid"
+            (click)="onLoginForm()">Login</button>
+          <button
+            type="button"
+            class="btn btn-success"
+            [disabled]="!userRegisterForm.valid"
+            (click)="onSubmit()">Register</button>
+          <button
+            type="button"
+            class="btn btn-danger" (click)="onCancel()"
+           >Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              class="form-control"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="email">eMail</label>
+            <input
+              type="text"
+              id="email"
+              formControlName="email"
+              class="form-control"
+              email
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              class="form-control"
+
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

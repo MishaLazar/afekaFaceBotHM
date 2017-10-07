@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PostModel} from "../../models/post.model";
-import {ImgDialogComponent} from "../../shared/img-dialog/img-dialog.component";
-import {MdDialog} from "@angular/material";
 
 @Component({
   selector: 'app-post',
@@ -14,23 +12,28 @@ export class PostComponent implements OnInit {
   postImg:string;
 
 
-  constructor(private dialog: MdDialog) { }
+
+  constructor() { }
 
   ngOnInit() {
-    this.postImg = this.post.postImgArray[0].img64bitString;
+
   }
   onImgOpen(){
-    console.log('onImgOpen')
-    let dialog = this.dialog.open(ImgDialogComponent);
+    /*let config = new MdDialogConfig();
+    config = {
+      disableClose: false,
+      width: '50%',
+      height: '50%',
+      position: {
+        top: '50%',
+        bottom: '50%',
+        left: '50%',
+        right: '50%'
 
-    dialog.afterClosed()
-      .subscribe(selection => {
-        if (selection) {
-          console.log(selection)
-        } else {
-          // User clicked 'Cancel' or clicked outside the dialog
-        }
-      });
+      }
+
+    }*/
+
 
   }
 

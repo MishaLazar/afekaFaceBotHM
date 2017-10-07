@@ -31,4 +31,8 @@ export class RegisterNewUserComponent implements OnInit {
     console.log(this.userRegisterForm.value);
   }
 
+  onLoginForm(){
+
+  }
+
 }
